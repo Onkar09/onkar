@@ -28,7 +28,7 @@ caps['os'] = 'Windows'
 
 driver = Selenium::WebDriver.for(:remote,
   # :url => "http://onkar432:tpxF62yvGa2t7z4MZ7JZ@fuhub.bsstag.com:8080/wd/hub",
-  :url => "http://onkar432:tpxF62yvGa2t7z4MZ7JZ@fuhub.bsstag.com:8080/wd/hub",
+  :url => "http://onkar269:t7jdGiACoXDKiDkpEq3d@cihub.bsstag.com:4444/wd/hub",
   :desired_capabilities => caps)
 # driver.navigate.to "http://www.popuptest.com/popuptest3.html"
 # driver.navigate.to "http://localtesting.browserstack.com"
