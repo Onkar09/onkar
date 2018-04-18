@@ -16,10 +16,10 @@ caps['browserstack.debug']=true
 # caps['browserstack.local'] = 'true'
 # caps['browserstack.video'] = 'true'
 # caps['acceptSslCerts'] = 'true'
-caps['browser'] = 'Chrome'
+caps['browser'] = $BROWSER
 # caps['browser_version'] = '14.0'
 
-caps['os'] = 'Windows'
+caps['os'] = $OS
 # caps['browserstack.networkLogs'] = true
 # caps ['os_version'] = '10'
 
@@ -28,17 +28,15 @@ caps['os'] = 'Windows'
 
 driver = Selenium::WebDriver.for(:remote,
   # :url => "http://onkar432:tpxF62yvGa2t7z4MZ7JZ@fuhub.bsstag.com:8080/wd/hub",
-  :url => "http://onkar269:t7jdGiACoXDKiDkpEq3d@cihub.bsstag.com:4444/wd/hub",
+  :url => "http://onkar15:g8pm2ChQ2QEnadmAMPGq@hub.browserstack.com:8080/wd/hub",
   :desired_capabilities => caps)
-# driver.navigate.to "http://www.popuptest.com/popuptest3.html"
-# driver.navigate.to "http://localtesting.browserstack.com"
-# driver.navigate.to "https://admin:abcd@hulk.bsstag.com/admin/terminals" 
+
 driver.navigate.to "http://www.google.com"
-# driver.navigate.to "http://57227f79.ngrok.io"
-# driver.navigate.to "http://ff6acad2.ngrok.io"
+
 element = driver.find_element(:name, 'q')
 element.send_keys "BrowserStack"
 element.submit
-# driver.sleep 150
+
 5.times{ puts driver.title}
+
 driver.quit
