@@ -40,5 +40,5 @@ element = driver.find_element(:name, 'q')
 element.send_keys "BrowserStack"
 element.submit
 # driver.sleep 150
-5000.times{ puts driver.title}
+5.times{ puts driver.title}
 driver.quit
